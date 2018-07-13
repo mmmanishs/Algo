@@ -9,16 +9,12 @@
 import Foundation
 class Problem6: Solvale {
     func startSolving() {
-        let arrayInput = inputForMultimerge
-//        let n1 = ListNode.createList(values: [-8,-7,-7,-5,1,1,3,4])
-//        let n2 = ListNode.createList(values: [-2])
-//        let n3 = ListNode.createList(values: [-10,-10,-7,0,1,3])
-//        let n4 = ListNode.createList(values: [2])
-        var inputLists = [ListNode?]()
-        for input in arrayInput {
-            inputLists.append(ListNode.createList(values: input))
-        }
-        ListNode.printList(mergeKLists(inputLists))
+        let n1 = ListNode.createList(values: [-8,-7,-7,-5,1,1,3,4])
+        let n2 = ListNode.createList(values: [-2])
+        let n3 = ListNode.createList(values: [-10,-10,-7,0,1,3])
+        let n4 = ListNode.createList(values: [2])
+
+        ListNode.printList(mergeKLists([n1,n2,n3,n4]))
     }
     
     func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
@@ -89,7 +85,9 @@ class Problem6: Solvale {
                 nodes[index] = nodes[index]?.next
             }
         }
-        return nodes
+        return nodes.filter { node in
+            return node != nil
+        }
     }
     
     func findSmallestNodes(_ lists: [ListNode?]) -> [Bool] {
