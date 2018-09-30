@@ -107,7 +107,7 @@ public class ListNode {
         var n1 = l
         var output = ""
         while n1 != nil {
-            output += "\(n1?.val) --> "
+            output += "\(n1!.val) --> "
             n1 = n1?.next
         }
         print(output)
@@ -116,7 +116,7 @@ public class ListNode {
     static func printList(_ list: [ListNode?]) {
         var output = "["
         for n1 in list {
-            output += "\(n1?.val), "
+            output += "\(n1!.val), "
         }
          output += "]"
         print(output)

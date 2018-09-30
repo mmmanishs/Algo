@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class Problem5: Solvale {
     func startSolving() {
         if isPalindrome(0) {

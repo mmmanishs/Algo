@@ -9,7 +9,7 @@
 import Foundation
 // Problem: Check if the opening and closing brackets perfectly match in a string
 
-let problem = Problem13()
+let problem = ReverseList()
 
 
 problem.startSolving()
